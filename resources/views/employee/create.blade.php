@@ -38,7 +38,7 @@
                                <input type="text" class="form-control g-2" id="fname" name="fname" placeholder="Enter your Firstname" require>
                          </div>
                           @error('fname') <span class="text-danger">{{$message}}</span> @enderror
-                  
+
                         <div class="form-group col-12">
                           <label for="exampleInputPassword1">Last Name</label>
                           <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter your Last Name">
@@ -47,7 +47,7 @@
 
                         <div class="form-group col-12">
                            <label for="exampleInputFile">Middle Name</label>
-                   
+
                           <input type="text" class="form-control" id="midname" name="midname" placeholder="Enter your Middle Name">
                         </div>
                           @error('midname') <span class="text-danger">{{$message}}</span> @enderror
@@ -72,7 +72,7 @@
                           <input type="number" class="form-control" id="age" name="age" placeholder="">
                         </div>
                         @error('age') <span class="text-danger">{{$message}}</span> @enderror
-              
+
                 </div>
                 <!-- /.card-body -->
 
@@ -80,7 +80,7 @@
                   <button type="submit" class="btn btn-success col-12">Submit</a>
                 </div>
 
-           
+
               </form>
 
 
