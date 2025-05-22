@@ -28,7 +28,7 @@
                      <h3 class="card-title">Add new employee</h3>
                    </div>
 
-                     <form  action="{{ route('employee.store') }}" method="POST">
+                     <form  action="{{ route('employee.index') }}" method="POST"> <!--from store to index-->
                       @csrf
                        <div class="row card-body col-12">
                          <div class="form-group col-12">

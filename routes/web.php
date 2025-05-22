@@ -30,6 +30,8 @@ Route::middleware('auth')->group(function () {
 
 
 
+    Route::get('employee/create', [App\Http\Controllers\employeecontroller::class, 'create'])->name('employee.create');
+    //for storing ng data
 
 
 
