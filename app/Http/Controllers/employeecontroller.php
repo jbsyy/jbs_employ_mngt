@@ -14,11 +14,11 @@ class employeecontroller extends Controller
         return view ('employee.index');
     }
 
-    // public function create()
-    // {
-    //     $employees = employee::all();
-    //     return view ('employee.create');
-    // }
+     public function create()
+     {
+         $employees = employee::all();
+         return view ('employee.create');
+     }
 
 
     public function store(Request $request)
