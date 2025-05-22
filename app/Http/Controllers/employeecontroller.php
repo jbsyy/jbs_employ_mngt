@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Fascades\DB;
 use Response;
 use Illuminate\Http\Request;
@@ -10,42 +11,55 @@ class employeecontroller extends Controller
 {
     public function index()
     {
+<<<<<<< HEAD
          $employees = employee::all();
         return view ('employee.index');
+=======
+
+        return view('employee.index');
+>>>>>>> f32c396e829eee35f4b730696546d61073c2df70
     }
 
+<<<<<<< HEAD
      public function create()
      {
          $employees = employee::all();
          return view ('employee.create');
      }
+=======
+    public function create()
+    {
+        // $employees = employee::all();
+        return view('employee.create');
+    }
+>>>>>>> 1482fd1768283bfc52183b98567636da0a3e0a52
 
 
     public function store(Request $request)
     {
-    $request->validate([
-        'fname' => 'required|max:255|string',
-        'lname' => 'required|max:255|integer',
-        'midname' => 'required|max:255|string',
-        'age' => 'required|integer',
-        'address' => 'required|max:255|string',
-        'zip' => 'required|date',
-        'date' => 'datestamps'
+        $request->validate([
+            'fname' => 'required|max:255|string',
+            'lname' => 'required|max:255|string',
+            'midname' => 'required|max:255|string',
+            'age' => 'required|integer',
+            'address' => 'required|max:255|string',
+            'zip' => 'required|date',
+            'date' => 'datestamps'
 
-    ]);
+        ]);
 
-    employee::show($request->all());
-    return view ('employee.create');
+        employee::show($request->all());
+        return view('employee.create');
     }
 
-    public function edit( int $id)
+    public function edit(int $id)
     {
         $employees = employee::find($id);
-        return view ('employee.edit');
+        return view('employee.edit');
     }
 
-    public function update(Request $request, int $id) {
-        {
+    public function update(Request $request, int $id)
+    { {
             $request->validate([
                 'fname' => 'required|max:255|string',
                 'lname' => 'required|max:255|string',
@@ -58,13 +72,14 @@ class employeecontroller extends Controller
             ]);
 
             employee::findOrFail($id)->update($request->all());
-            return redirect ()->back()->with('status','Employee Updated Successfully!');
-            }
+            return redirect()->back()->with('status', 'Employee Updated Successfully!');
+        }
     }
 
-    public function destroy(int $id){
+    public function destroy(int $id)
+    {
         $employees = employee::findOrFail($id);
         $employees->destroy();
-        return redirect ()->back()->with('status','Employee Deleted');
+        return redirect()->back()->with('status', 'Employee Deleted');
     }
 }

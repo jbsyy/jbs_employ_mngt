@@ -15,10 +15,15 @@
     <!-- Main content: Add Employee Form -->
     <div class="content">
         <div class="container-fluid">
+<<<<<<< HEAD
             <div class="row">
                 @if (session('status'))
                     <div class="alert alert-success">{{ session('status') }}</div>
                 @endif
+=======
+            <a href="{{ route('employee.create') }}" class="btn btn-info">Add New Employee</a>
+            <div class="row">
+>>>>>>> f32c396e829eee35f4b730696546d61073c2df70
 
                 <div class="col-6 m-auto">
                     <div class="card card-secondary">
@@ -78,6 +83,7 @@
             <div class="mt-4">
                 <a href="{{ route('employee.create') }}" class="btn btn-info mb-3">Add New Employee</a>
 
+<<<<<<< HEAD
                 <div class="card">
                     <div class="card-body">
                         <table class="table table-bordered table-striped text-black">
@@ -120,3 +126,4 @@
         </div>
     </div>
 @endsection
+
