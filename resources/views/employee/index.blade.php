@@ -42,7 +42,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($employee as $items)
+                            @foreach ($employees as $items)
                             <tr>
                                 <td>{{$items->id}}</td>
                                 <td>{{$items->fname}}</td>
