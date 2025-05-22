@@ -17,7 +17,6 @@ class employeecontroller extends Controller
     }
      public function create()
      {
-         $employees = employee::all();
          return view ('employee.create');
      }
 
@@ -31,12 +30,12 @@ class employeecontroller extends Controller
             'midname' => 'required|max:255|string',
             'age' => 'required|integer',
             'address' => 'required|max:255|string',
-            'zip' => 'required|date',
+            'zip' => 'required|integer', //yung zip is not date
             'date' => 'datestamps'
 
         ]);
 
-        employee::show($request->all());
+        employee::create($request->all()); //yung store pinalitan ng create
         return view('employee.create');
     }
 
