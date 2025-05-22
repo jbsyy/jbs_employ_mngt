@@ -11,28 +11,16 @@ class employeecontroller extends Controller
 {
     public function index()
     {
-<<<<<<< HEAD
+
          $employees = employee::all();
-        return view ('employee.index');
-=======
-
-        return view('employee.index');
->>>>>>> f32c396e829eee35f4b730696546d61073c2df70
+        return view ('employee.index', compact('employees'));
     }
-
-<<<<<<< HEAD
      public function create()
      {
          $employees = employee::all();
          return view ('employee.create');
      }
-=======
-    public function create()
-    {
-        // $employees = employee::all();
-        return view('employee.create');
-    }
->>>>>>> 1482fd1768283bfc52183b98567636da0a3e0a52
+
 
 
     public function store(Request $request)
@@ -79,7 +67,7 @@ class employeecontroller extends Controller
     public function destroy(int $id)
     {
         $employees = employee::findOrFail($id);
-        $employees->destroy();
+        $employees->delete();
         return redirect()->back()->with('status', 'Employee Deleted');
     }
 }

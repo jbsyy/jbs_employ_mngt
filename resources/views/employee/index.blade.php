@@ -12,78 +12,11 @@
         </div>
     </div>
 
-    <!-- Main content: Add Employee Form -->
-    <div class="content">
-        <div class="container-fluid">
-<<<<<<< HEAD
-            <div class="row">
-                @if (session('status'))
-                    <div class="alert alert-success">{{ session('status') }}</div>
-                @endif
-=======
-            <a href="{{ route('employee.create') }}" class="btn btn-info">Add New Employee</a>
-            <div class="row">
->>>>>>> f32c396e829eee35f4b730696546d61073c2df70
-
-                <div class="col-6 m-auto">
-                    <div class="card card-secondary">
-                        <div class="card-header">
-                            <h3 class="card-title">Add New Employee</h3>
-                        </div>
-
-                        <form action="{{ route('employee.store') }}" method="POST">
-                            @csrf
-                            <div class="row card-body">
-                                <div class="form-group col-12">
-                                    <label for="fname">First Name</label>
-                                    <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter your First Name" required>
-                                    @error('fname') <span class="text-danger">{{ $message }}</span> @enderror
-                                </div>
-
-                                <div class="form-group col-12">
-                                    <label for="lname">Last Name</label>
-                                    <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter your Last Name">
-                                    @error('lname') <span class="text-danger">{{ $message }}</span> @enderror
-                                </div>
-
-                                <div class="form-group col-12">
-                                    <label for="midname">Middle Name</label>
-                                    <input type="text" class="form-control" id="midname" name="midname" placeholder="Enter your Middle Name">
-                                    @error('midname') <span class="text-danger">{{ $message }}</span> @enderror
-                                </div>
-
-                                <div class="form-group col-12">
-                                    <label for="address">Address</label>
-                                    <input type="text" class="form-control" id="address" name="address" placeholder="Enter Address">
-                                    @error('address') <span class="text-danger">{{ $message }}</span> @enderror
-                                </div>
-
-                                <div class="form-group col-6">
-                                    <label for="zip">Zip</label>
-                                    <input type="number" class="form-control" id="zip" name="zip">
-                                    @error('zip') <span class="text-danger">{{ $message }}</span> @enderror
-                                </div>
-
-                                <div class="form-group col-6">
-                                    <label for="age">Age</label>
-                                    <input type="number" class="form-control" id="age" name="age">
-                                    @error('age') <span class="text-danger">{{ $message }}</span> @enderror
-                                </div>
-                            </div>
-
-                            <div class="card-footer">
-                                <button type="submit" class="btn btn-success w-100">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
 
             <!-- Employee Table -->
             <div class="mt-4">
                 <a href="{{ route('employee.create') }}" class="btn btn-info mb-3">Add New Employee</a>
 
-<<<<<<< HEAD
                 <div class="card">
                     <div class="card-body">
                         <table class="table table-bordered table-striped text-black">
@@ -100,7 +33,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($employee as $items)
+                                @foreach($employees as $items)
                                     <tr>
                                         <td>{{ $items->id }}</td>
                                         <td>{{ $items->fname }}</td>
