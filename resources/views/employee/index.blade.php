@@ -16,8 +16,8 @@
     <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
-        <a href="{{ route('employee.create') }}" class="btn btn-info">Add New Employee</a>
-        <div class="row">
+            <a href="{{ route('employee.create') }}" class="btn btn-info">Add New Employee</a>
+            <div class="row">
 
 
                 <div class="card-head">
@@ -42,6 +42,7 @@
                             </tr>
                         </thead>
 
+<<<<<<< HEAD
                         <tbody  >
                             {{-- @foreach ($employee as $items) --}}
                             @foreach ($employee as $items)
@@ -60,6 +61,32 @@
                                 </td>
                                 <td>
                                 <span class="badge bg-danger"><a href="{{  route('employee.delete',$items->id)}}" class="m-3 p-lg-5"><h5>Delete</h5></a></span>
+=======
+                        <tbody>
+                            @foreach ('$employees as $items')
+                            <tr>
+
+                                <td>class="">{{$items->id}}</td>
+                                <td>{{$items->fname}}</td>
+                                <td>{{$items->lname}}</td>
+                                <td>{{$items->midame}}</td>
+                                <td>{{$items->age}}</td>
+                                <td>{{$items->address}}</td>
+                                <td>{{$items->zip}}</td>
+
+                                <td>
+                                    <span class="badge bg-success"><a href="{{ route('employee.edit', $items->id) }}"
+                                            class="btn btn-success mx-3  ">
+                                            <h5>Edit</h5>
+                                        </a></span>
+                                </td>
+                                <td>
+
+                                    <span class="badge bg-danger"><a href="{{ route('employee.delete', $items->id) }}"
+                                            class="m-3 p-lg-5">
+                                            <h5>Delete</h5>
+                                        </a></span>
+>>>>>>> 1482fd1768283bfc52183b98567636da0a3e0a52
                                 </td>
 
                             </tr>
@@ -75,8 +102,8 @@
                 </div>
 
 
-            <!-- /.row -->
-        </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content -->
-@endsection
+                <!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content -->
+    @endsection
